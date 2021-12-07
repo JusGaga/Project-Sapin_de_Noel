@@ -7,11 +7,10 @@ require_once "fonctions.php";
     if ($_GET)
     {
         $nom = $_GET[ 'Pseudo' ];
-        $mail = $_GET[ 'Email' ];             
      
 
         $mysqli = new mysqli($servername, $username, $password, $database);
-        $query  = "insert into utilisateur_inscrit ( pseudo , email) values (' $nom', '$mail' );";
+        $query  = "insert into utilisateur_inscrit ( pseudo ) values (' $nom' );";
         //print( $query );
         $res = $mysqli->query( $query );
 
@@ -34,7 +33,7 @@ require_once "fonctions.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
+    <title> utilisateur_inscrit</title>
 </head>
 <style>
 
@@ -44,25 +43,44 @@ require_once "fonctions.php";
     border-left: 1px solid #000;
 
 }
-
+body
+{
+    background-size: 100%;
+    text-align: center;
+    color: white;
+    
+}
 </style>
+<script>
 
-<body>
-    <div classe="button"></div>
-        <form action="#" method="get">
+document.getElementById( 'butok').disabled= true;
 
-    <label for="Pseudo"><b>Pseudo</b></label>
-    <input type="Pseudo" placeholder="Enter Pseudo" name="Pseudo" id="Pseudo" required>
-        <br>
-        <br>
-    <label for="Email"><b>Email</b></label>
-    <input type="Email" placeholder="Enter Email" name="Email" id="Email" required>
-        <br>
-<input type="checkbox" name="NomCadeau" id="NomCadeau"> 
-<label for="Validation"><b>Validation</b></label>
 
-       <br>
-    <button type="submit" class="registerbtn">OK</button>
+function verifie()
+{
+    if ( document.getElementById( 'accept').checked  )
+        document.getElementById( 'butok').disabled= false;
+    else
+        document.getElementById( 'butok').disabled= true;
+        
+}
+
+
+</script>
+
+<body background="Noel98.gif">
+   
+      <form action="#" method="get">
+
+                <label for="Pseudo"><b>Pseudo</b></label>
+                <input type="Pseudo" placeholder="Enter Pseudo" name="Pseudo" id="Pseudo" required>
+                    <br>
+                    <br>
+            <input type="checkbox" name="NomCadeau" id="accept" onclick="verifie()"> 
+            <label for="Validation"><b>Validation</b></label>
+
+                <br>
+                <button type="submit" class="registerbtn" id="butok" disabled="true">OK</button>
         </form>
 </body>
 </html>
