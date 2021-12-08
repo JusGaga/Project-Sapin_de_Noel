@@ -48,6 +48,10 @@ body
     background-size: 100%;
     text-align: center;
     color: white;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
     
 }
 </style>
