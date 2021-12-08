@@ -59,10 +59,14 @@ body {
 #accept {
   width: 48px;
   height: 48px;
+  /* outline: none; */
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none; */
+  /* appearance: none; */
+  /* background-color: red; */
 }
 
 #Mont3 {
-
   left: 0px;
 
   width: 100%;
@@ -70,7 +74,6 @@ body {
 }
 
 #Mont2 {
-
   width: 100%;
   left: 0px;
 
@@ -78,70 +81,147 @@ body {
 }
 
 #Mont1 {
-
   width: 100%;
   left: 0px;
 
   z-index: -1;
 }
 
-.stars1{
-    position: absolute;
-    left: 150px;
-    top: 314px;
+.stars1 {
+  position: absolute;
+  left: 150px;
+  top: 314px;
 }
-.stars2{
-    position: absolute;
-    left: 420px;
-    top: 451px;
+.stars2 {
+  position: absolute;
+  left: 420px;
+  top: 451px;
 }
-.stars3{
-    position: absolute;
-    left: 210px;
-    top: 200px;
+.stars3 {
+  position: absolute;
+  left: 210px;
+  top: 200px;
 }
-.stars4{
-    position: absolute;
-    left: 670px;
-    top: 314px;
+.stars4 {
+  position: absolute;
+  left: 670px;
+  top: 314px;
 }
-.stars5{
-    position: absolute;
-    left: 805px;
-    top: 500px;
+.stars5 {
+  position: absolute;
+  left: 805px;
+  top: 500px;
 }
-.stars6{
-    position: absolute;
-    left: 480px;
-    top: 234px;
+.stars6 {
+  position: absolute;
+  left: 480px;
+  top: 234px;
 }
-.stars7{
-    position: absolute;
-    left: 405px;
-    top: 705px;
+.stars7 {
+  position: absolute;
+  left: 405px;
+  top: 705px;
 }
-.stars8{
-    position: absolute;
-    left: 125px;
-    top: 755px;
+.stars8 {
+  position: absolute;
+  left: 125px;
+  top: 755px;
 }
-.stars9{
-    position: absolute;
-    left: 300px;
-    top: 378px;
+.stars9 {
+  position: absolute;
+  left: 300px;
+  top: 378px;
 }
-.stars10{
-    position: absolute;
-    left: 50px;
-    top: 488px;
+.stars10 {
+  position: absolute;
+  left: 50px;
+  top: 488px;
 }
-.stars11{
-    position: absolute;
-    left: 900px;
-    top: 808px;
+.stars11 {
+  position: absolute;
+  left: 900px;
+  top: 808px;
 }
 
-.stars{
-    width: 24px;
-    background-color:transparent;
-    
+.stars {
+  width: 24px;
+  background-color: transparent;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url("https://i.ibb.co/FxzBYR9/night.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white url("https://i.ibb.co/7JfqXxB/sunny.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#Sw {
+  position: absolute;
+  top: 180px;
+  right: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
