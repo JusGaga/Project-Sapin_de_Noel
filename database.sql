@@ -4,15 +4,14 @@ use Noel
 
 CREATE TABLE inscriptions (
     ->   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    ->   pseudo VARCHAR(50),
-    ->   email VARCHAR(255)
+    ->   pseudo VARCHAR(50)
     -> );
 
-into utilisateur_inscrit ( pseudo,email ) values( "hanane","dgfdfdg@gmzil.fr" );
-into utilisateur_inscrit ( pseudo,email ) values( "remy","123@gmzil.fr" );
-into utilisateur_inscrit ( pseudo,email ) values( "olivier","1234@gmzil.fr" );
-into utilisateur_inscrit ( pseudo,email ) values( "xavier","12345@gmzil.fr" );
-into utilisateur_inscrit ( pseudo,email ) values( "jean-philippe","123456@gmzil.fr" );
+into utilisateur_inscrit ( pseudo ) values( "hanane" );
+into utilisateur_inscrit ( pseudo) values( "remy");
+into utilisateur_inscrit ( pseudo ) values( "olivier" );
+into utilisateur_inscrit ( pseudo ) values( "xavier" );
+into utilisateur_inscrit ( pseudo) values( "jean-philippe" );
 
 
  CREATE TABLE admin (
