@@ -2,11 +2,12 @@
 require_once "fonctions.php";
 entete("GestionAdmin");
 ?>
-<script src="./JS/Compteurs.js"></script>
 
-<input type="date" name="" id="date">
-<input type="button" id="valider" value="Envoyer">
+
+<input type="date" id="date" value="2021-12-24">
+<input type="button" id="valider" value="Envoyer" onclick="clik()">
 
 
 </body>
+
 </html>

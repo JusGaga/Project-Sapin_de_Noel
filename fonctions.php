@@ -42,17 +42,11 @@ function entete( $titre_page )
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>$titre_page</title>
+        <script src="./JS/Compteurs.js"></script>
 
   
     </head>
-    <body>
+    <body onload="init()">
     TOTO123;
     print( $var );
 }
-
-
-
-
-?>
-
-
