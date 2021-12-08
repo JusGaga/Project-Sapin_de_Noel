@@ -1,0 +1,147 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 126, 152, 1) 100%);
+  background-repeat: no-repeat;
+}
+
+#lutin,
+#Pnoel {
+  width: 128px;
+}
+
+.countdown {
+  position: relative;
+  top: 150px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  font-size: 50px;
+}
+.countdown h2 {
+  font-size: 50px;
+}
+
+#form {
+  position: relative;
+  top: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+#validation {
+  position: relative;
+  left: 180px;
+  width: 50%;
+}
+
+#inForm {
+  font-size: 36px;
+}
+
+#Pseudo {
+  height: 75px;
+  font-size: 40px;
+}
+
+#butok {
+  height: 64px;
+  width: 156px;
+  font-size: 36px;
+}
+
+#accept {
+  width: 48px;
+  height: 48px;
+}
+
+#Mont3 {
+
+  left: 0px;
+
+  width: 100%;
+  z-index: -3;
+}
+
+#Mont2 {
+
+  width: 100%;
+  left: 0px;
+
+  z-index: -2;
+}
+
+#Mont1 {
+
+  width: 100%;
+  left: 0px;
+
+  z-index: -1;
+}
+
+.stars1{
+    position: absolute;
+    left: 150px;
+    top: 314px;
+}
+.stars2{
+    position: absolute;
+    left: 420px;
+    top: 451px;
+}
+.stars3{
+    position: absolute;
+    left: 210px;
+    top: 200px;
+}
+.stars4{
+    position: absolute;
+    left: 670px;
+    top: 314px;
+}
+.stars5{
+    position: absolute;
+    left: 805px;
+    top: 500px;
+}
+.stars6{
+    position: absolute;
+    left: 480px;
+    top: 234px;
+}
+.stars7{
+    position: absolute;
+    left: 405px;
+    top: 705px;
+}
+.stars8{
+    position: absolute;
+    left: 125px;
+    top: 755px;
+}
+.stars9{
+    position: absolute;
+    left: 300px;
+    top: 378px;
+}
+.stars10{
+    position: absolute;
+    left: 50px;
+    top: 488px;
+}
+.stars11{
+    position: absolute;
+    left: 900px;
+    top: 808px;
+}
+
+.stars{
+    width: 24px;
+    background-color:transparent;
+    
