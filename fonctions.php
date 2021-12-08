@@ -11,7 +11,11 @@ function query( $q )
     return $res;
 }
 
+<<<<<<< HEAD
 function comboBox(  $table, $query=""  )
+=======
+function comboBox(  $table, $query="", $visibleAdd=1  )
+>>>>>>> formulair
 {
     GLOBAL $servername, $username, $password, $database;
 
@@ -25,11 +29,20 @@ function comboBox(  $table, $query=""  )
     {
         $id  = $ligne[ 'id' ];
         $nom = $ligne[ 'nom' ];
+<<<<<<< HEAD
         print( "<option value=$id> $nom</option>\n" );
     }
     $mysqli->close();
     print( "</select>\n");
     print( "<div class='buttonCombo' onclick=\"addItem( '$table', 'ajout $table' )\" >+</div>\n");
+=======
+        print( "<option value=$id>".utf8_encode($nom)."</option>\n" );
+    }
+    $mysqli->close();
+    print( "</select>\n");
+    if($visibleAdd)
+        print( "<div class='buttonCombo' onclick=\"addItem( '$table', 'ajout $table' )\" >+</div>\n");
+>>>>>>> formulair
 }
 
 function entete( $titre_page )
