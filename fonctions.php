@@ -2,14 +2,14 @@
 require_once "ressources.php";
 
 
-function query( $q )
-{
-    GLOBAL $servername, $username, $password, $database;
-    $mysqli = new mysqli($servername, $username, $password, $database);
-    return $mysqli->query( $q );
-    $mysqli->close();
-    return $res;
-}
+// function query( $q )
+// {
+//     GLOBAL $servername, $username, $password, $database;
+//     $mysqli = new mysqli($servername, $username, $password, $database);
+//     return $mysqli->query( $q );
+//     $mysqli->close();
+//     return $res;
+// }
 
 function comboBox(  $table, $query=""  )
 {
@@ -43,17 +43,11 @@ function entete( $titre_page )
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>$titre_page</title>
-        <link rel="stylesheet" href="fonctions.css">
-        <script type="text/javascript" src="fonctions.js"></script>
+        <script src="./JS/Compteurs.js"></script>
+
+  
     </head>
-    <body>
+    <body onload="init()">
     TOTO123;
     print( $var );
 }
-
-
-
-
-?>
-
-

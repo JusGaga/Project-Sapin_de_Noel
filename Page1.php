@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Document</title>
     <script src="./JS/Compteurs.js"></script>
+
 </head>
 
 <body>
+    <script>
+        
+    </script>
     <div class="countdown">
         <div class="countdown-days">
             <h2 id="days">0</h2>
@@ -34,4 +36,3 @@
 </body>
 
 </html>
->>>>>>> loginAdmin
