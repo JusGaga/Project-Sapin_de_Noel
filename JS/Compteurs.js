@@ -19,7 +19,7 @@ function countdown(){
     const minutes = Math.floor(total_seconds/ 60) % 60
     const seconds = Math.floor(total_seconds) % 60
 
-    daysDiv.innerHTML = days
+    daysDiv.innerHTML = formatTime(days)
     hoursDiv.innerHTML = formatTime(hours)
     minutesDiv.innerHTML = formatTime(minutes)
     secondsDiv.innerHTML = formatTime(seconds)
