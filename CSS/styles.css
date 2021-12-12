@@ -1,4 +1,4 @@
-@media screen and (min-width: 0px) and (max-width: 600px) and (orientation: portrait) {
+@media screen and (min-width: 0px) and (max-width: 650px) and (orientation: portrait) {
   html,
   body {
     width: 100% !important;
@@ -14,7 +14,6 @@
   body {
     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 50%, rgba(0, 126, 152, 1) 100%);
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
   }
 
   #lutin,
@@ -148,7 +147,7 @@
     width: 100%;
     overflow: hidden;
     z-index: -10;
-    content: url("../img/0-600px/Vector 3.png");
+    content: url("../img/0-600px/Mont3.png");
   }
 
   #Mont2 {
@@ -158,7 +157,7 @@
     left: 0px;
     overflow: hidden;
     z-index: -8;
-    content: url("../img/0-600px/Vector 2.png");
+    content: url("../img/0-600px/Mont2.png");
   }
 
   #Mont1 {
@@ -168,12 +167,13 @@
     left: 0px;
     overflow: hidden;
     z-index: -6;
-    content: url("../img/0-600px/Vector 1.png");
+    content: url("../img/0-600px/Mont1.png");
   }
   #foret {
     position: absolute;
     width: 100%;
     bottom: 0px;
+    /* overflow: hidden;  */
   }
 
   #stars {
@@ -273,16 +273,26 @@
   }
 }
 
-@media screen and (min-width: 600px) and (orientation: portrait) {
+
+
+
+
+
+@media screen and (min-width: 650px) and (orientation: portrait) {
   html,
   body {
-    height: 100%;
-    margin: 0;
-    overflow: auto;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: 100% !important;
+    max-height: none !important;
+    overflow: hidden !important;
+    overflow-x: hidden !important;
+    margin: 0px;
   }
 
   body {
-    background: rgb(2, 0, 36);
+    /* background: rgb(2, 0, 36); */
     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 126, 152, 1) 100%);
     background-repeat: no-repeat;
   }
@@ -309,7 +319,7 @@
     flex-direction: row;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 75%;
     height: 150px;
     background: rgba(10, 23, 83, 0.5);
@@ -325,7 +335,7 @@
 
   #form {
     position: relative;
-    top: 150px;
+    top: 120px;
     display: flex;
     justify-content: center;
   }
@@ -338,6 +348,7 @@
 
   #inForm {
     font-size: 24px;
+    width: 50%;
   }
 
   #Pseudo {
@@ -386,7 +397,7 @@
   }
 
   #Mont3 {
-    position: fixed;
+    position: absolute;
     width: 1835px;
     height: 725px;
     left: -258px;
@@ -397,7 +408,7 @@
   }
 
   #Mont2 {
-    position: fixed;
+    position: absolute;
     width: 1515px;
     height: 515px;
     left: -349px;
@@ -408,120 +419,21 @@
   }
 
   #Mont1 {
-    position: fixed;
+    position: relative;
     width: 1840px;
     height: 595px;
-    left: -806px;
+    left: -706px;
     bottom: -150px;
     z-index: -6;
     overflow: hidden;
     content: url("../img/Group 12.svg");
   }
 
-  .stars1 {
+  #foret {
     position: absolute;
-    left: 25px;
-    top: 183px;
-  }
-  .stars2 {
-    position: absolute;
-    left: -327px;
-    top: 238px;
-  }
-  .stars3 {
-    position: absolute;
-    left: -151px;
-    top: 410px;
-  }
-  .stars4 {
-    position: absolute;
-    left: 417px;
-    top: 183px;
-  }
-  .stars5 {
-    position: absolute;
-    left: 537px;
-    top: 358px;
-  }
-  .stars6 {
-    position: absolute;
-    left: -139px;
-    top: 701px;
-  }
-  .stars7 {
-    position: absolute;
-    left: -354px;
-    top: 467px;
-  }
-  .stars8 {
-    position: absolute;
-    left: 848px;
-    top: 146px;
-  }
-  .stars9 {
-    position: absolute;
-    left: 619px;
-    top: 106px;
-  }
-  .stars10 {
-    position: absolute;
-    left: 482px;
-    top: 567px;
-  }
-  .stars11 {
-    position: absolute;
-    left: 265px;
-    top: 318px;
-  }
-  .stars12 {
-    position: absolute;
-    left: 1100px;
-    top: 74px;
-  }
-  .stars13 {
-    position: absolute;
-    left: 1355px;
-    top: 527px;
-  }
-  .stars14 {
-    position: absolute;
-    left: 1120px;
-    top: 322px;
-  }
-  .stars15 {
-    position: absolute;
-    left: 1045px;
-    top: 381px;
-  }
-  .stars16 {
-    position: absolute;
-    left: 220px;
-    top: 102px;
-  }
-  .stars17 {
-    position: absolute;
-    left: -12px;
-    top: 559px;
-  }
-  .stars18 {
-    position: absolute;
-    left: 1019px;
-    top: 622px;
-  }
-  .stars19 {
-    position: absolute;
-    left: 704px;
-    top: 512px;
-  }
-  .stars20 {
-    position: absolute;
-    left: 220px;
-    top: 567px;
-  }
-  .stars21 {
-    position: absolute;
-    left: 139px;
-    top: 383px;
+    width: 100%;
+    bottom: 0px;
+    z-index: -12;
   }
 
   .moon {
@@ -533,12 +445,24 @@
     top: 102px;
     overflow: hidden;
   }
+  #stars {
+    position: absolute;
+    overflow: hidden;   
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -50;
+  }
+
   .stars {
-    width: 16px;
-    background-color: transparent;
-    content: url("../img/Stars.svg");
-    z-index: -20;
+    position: absolute;
+    background-image: url("../img/Stars.svg");
     overflow: hidden;
+    width: 1749px;
+    height: 667px;
+    left: -184px;
+    top: -75px;
+    z-index: -20;
   }
 
   .switch {
