@@ -1,20 +1,29 @@
-@media screen and (min-width: 0px) and (max-width: 650px) and (orientation: portrait) {
-  html,
-  body {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    height: 100% !important;
-    max-height: none !important;
-    overflow: hidden !important;
-    overflow-x: hidden !important;
-    margin: 0px;
-  }
+/* * CSS Realisé Par Gaetan
+   ! Simon Absent 13/12/2021
+*/
 
-  body {
-    background-image: linear-gradient(165deg, #000046 26%, #1CB5E0 100%);
-    background-repeat: no-repeat;
-  }
+/* style body and html for all pages */
+
+html,
+body {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: 100% !important;
+  max-height: none !important;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
+  margin: 0px;
+}
+
+body {
+  background-image: linear-gradient(165deg, #000046 26%, #1cb5e0 100%);
+  background-repeat: no-repeat;
+}
+
+/* * Media Queries for smartphone */
+@media screen and (min-width: 0px) and (max-width: 650px) and (orientation: portrait) {
+  /* ? NavBar with title  */
 
   #lutin,
   #Pnoel {
@@ -25,6 +34,10 @@
     font-size: 18px;
     margin-bottom: 0;
   }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Countdown */
 
   #containerCountdown {
     display: flex;
@@ -50,6 +63,10 @@
     font-size: 18px;
   }
 
+  /*------------------------------------------------------------------------*/
+
+  /* ? Form for register */
+
   #form {
     position: relative;
     top: 100px;
@@ -65,11 +82,11 @@
 
   #inForm {
     font-size: 24px;
-    border-radius:25px;
+    border-radius: 25px;
     background: rgba(33, 34, 37, 0.2);
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(2px);
-    padding:7px;
+    padding: 7px;
   }
 
   #Pseudo {
@@ -117,6 +134,10 @@
     color: #424242;
   }
 
+  /*------------------------------------------------------------------------*/
+
+  /* ? Background */
+
   #Sapin1 {
     position: absolute;
     left: 45%;
@@ -124,7 +145,7 @@
     width: 50%;
     /* overflow: hidden; */
     z-index: -5;
-    content: url("../img/0-600px/Sapin 1.png");
+    content: url("../img/0-600px/Sapin1.png");
   }
   #Sapin2 {
     position: absolute;
@@ -132,7 +153,7 @@
     width: 50%;
     /* overflow: hidden; */
     z-index: -7;
-    content: url("../img/0-600px/Sapin 2.png");
+    content: url("../img/0-600px/Sapin2.png");
   }
   #Sapin3 {
     position: absolute;
@@ -142,7 +163,7 @@
     width: 25%;
     /* overflow: hidden; */
     z-index: -9;
-    content: url("../img/0-600px/Sapin 3.png");
+    content: url("../img/0-600px/Sapin3.png");
   }
 
   #Mont3 {
@@ -183,7 +204,7 @@
 
   #stars {
     position: absolute;
-    overflow: hidden;   
+    overflow: hidden;
     width: 100%;
     height: 100%;
   }
@@ -197,6 +218,10 @@
     top: -160px;
     z-index: -20;
   }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? switch button */
 
   .switch {
     position: relative;
@@ -236,6 +261,7 @@
     -webkit-transition: 0.4s;
     transition: 0.4s;
     box-shadow: 0 0px 15px #2020203d;
+    /* change the url for change the img of the btn */
     background: #ffffff url("https://i.ibb.co/FxzBYR9/night.png");
     background-size: 16px;
     background-repeat: no-repeat;
@@ -253,13 +279,13 @@
     -webkit-transform: translateX(15px);
     -ms-transform: translateX(15px);
     transform: translateX(15px);
+    /* change the url for change the img of the btn */
     background: rgb(255, 255, 255) url("https://i.ibb.co/7JfqXxB/sunny.png");
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
@@ -278,31 +304,9 @@
   }
 }
 
-
-
-
-
-
+/* * Media Queries for tablettes */
 @media screen and (min-width: 650px) and (max-width: 1080px) and (orientation: portrait) {
-
-
-  html,
-  body {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    height: 100% !important;
-    max-height: none !important;
-    overflow: hidden !important;
-    overflow-x: hidden !important;
-    margin: 0px;
-  }
-
-  body {
-    
-    background-image: linear-gradient(165deg, #000046 26%, #1CB5E0 100%);
-    background-repeat: no-repeat;
-  }
+  /* ? NavBar with title  */
 
   #lutin,
   #Pnoel {
@@ -313,6 +317,10 @@
     font-size: 18px;
     margin-bottom: 0;
   }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Countdown */
 
   #containerCountdown {
     display: flex;
@@ -340,12 +348,16 @@
     font-size: 28px;
   }
 
+  /*------------------------------------------------------------------------*/
+
+  /* ? Form for register */
+
   #form {
     position: relative;
     top: 120px;
     display: flex;
     justify-content: center;
-    border-radius:25px;
+    border-radius: 25px;
   }
 
   #validation {
@@ -357,11 +369,11 @@
   #inForm {
     font-size: 24px;
     width: 50%;
-    border-radius:25px;
+    border-radius: 25px;
     background: rgba(10, 23, 83, 0.5);
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(25px);
-    padding:25px;
+    padding: 25px;
   }
 
   #Pseudo {
@@ -409,6 +421,10 @@
     color: #424242;
   }
 
+  /*------------------------------------------------------------------------*/
+
+  /* ? Background */
+
   #Mont3 {
     position: absolute;
     width: 1835px;
@@ -417,7 +433,7 @@
     bottom: -50px;
     z-index: -10;
     overflow: hidden;
-    content: url("../img/Group 10.svg");
+    content: url("../img/650-1080px/Mont3.svg");
   }
 
   #Mont2 {
@@ -428,18 +444,18 @@
     bottom: -50px;
     z-index: -8;
     overflow: hidden;
-    content: url("../img/Group 11.svg");
+    content: url("../img/650-1080px/Mont2.svg");
   }
 
   #Mont1 {
-    position:absolute;
+    position: absolute;
     width: 1840px;
     height: 595px;
     left: -706px;
     bottom: -150px;
     z-index: -6;
     overflow: hidden;
-    content: url("../img/Group 12.svg");
+    content: url("../img/650-1080px/Mont1.svg");
   }
 
   #foret {
@@ -452,7 +468,7 @@
   }
 
   .moon {
-    content: url("../img/Group 13.svg");
+    content: url("../img/650-1080px/Moon.svg");
     position: absolute;
     width: 206px;
     height: 206px;
@@ -462,7 +478,7 @@
   }
   #stars {
     position: absolute;
-    overflow: hidden;   
+    overflow: hidden;
     top: 0px;
     width: 100%;
     height: 100%;
@@ -480,6 +496,9 @@
     z-index: -20;
   }
 
+  /*------------------------------------------------------------------------*/
+
+  /* ? switch button */
   .switch {
     position: relative;
     display: inline-block;
@@ -541,7 +560,6 @@
     background-position: center;
   }
 
-  /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
