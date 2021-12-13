@@ -22,13 +22,14 @@ body {
 }
 
 /* * Media Queries for smartphone */
-@media screen and (min-width: 0px) and (max-width: 650px) and (orientation: portrait) {
+@media screen and (min-width: 0px) and (max-width: 650px) {
   /* ? NavBar with title  */
 
   #lutin,
-  #Pnoel {
-    width: 48px;
+  #PereNoel {
+    width: 48px;  
   }
+
 
   .title {
     font-size: 18px;
@@ -43,7 +44,7 @@ body {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 75px;
+    top: 50px;
   }
   .countdown {
     position: relative;
@@ -51,7 +52,7 @@ body {
     flex-direction: row;
     text-align: center;
     justify-content: center;
-    width: 75%;
+    width: 70%;
     background: rgba(10, 23, 83, 0.5);
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(2px);
@@ -74,6 +75,15 @@ body {
     justify-content: center;
   }
 
+  #divListe{
+    position:relative;
+    left:110px;
+  }
+
+  #divListe li{
+    font-size:12px;
+  }
+
   #validation {
     position: relative;
     left: 130px;
@@ -83,7 +93,7 @@ body {
   #inForm {
     font-size: 24px;
     border-radius: 25px;
-    background: rgba(33, 34, 37, 0.2);
+    background: rgba(33, 34, 37, 0.3);
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(2px);
     padding: 7px;
@@ -145,7 +155,7 @@ body {
     width: 50%;
     /* overflow: hidden; */
     z-index: -5;
-    content: url("../img/0-600px/Sapin1.png");
+    content: url("../img/0-650px/Sapin1.png");
   }
   #Sapin2 {
     position: absolute;
@@ -153,7 +163,7 @@ body {
     width: 50%;
     /* overflow: hidden; */
     z-index: -7;
-    content: url("../img/0-600px/Sapin2.png");
+    content: url("../img/0-650px/Sapin2.png");
   }
   #Sapin3 {
     position: absolute;
@@ -163,7 +173,7 @@ body {
     width: 25%;
     /* overflow: hidden; */
     z-index: -9;
-    content: url("../img/0-600px/Sapin3.png");
+    content: url("../img/0-650px/Sapin3.png");
   }
 
   #Mont3 {
@@ -173,7 +183,7 @@ body {
     width: 100%;
     overflow: hidden;
     z-index: -10;
-    content: url("../img/0-600px/Mont3.png");
+    content: url("../img/0-650px/Mont3.png");
   }
 
   #Mont2 {
@@ -183,7 +193,7 @@ body {
     left: 0px;
     overflow: hidden;
     z-index: -8;
-    content: url("../img/0-600px/Mont2.png");
+    content: url("../img/0-650px/Mont2.png");
   }
 
   #Mont1 {
@@ -193,7 +203,7 @@ body {
     left: 0px;
     overflow: hidden;
     z-index: -6;
-    content: url("../img/0-600px/Mont1.png");
+    content: url("../img/0-650px/Mont1.png");
   }
   #foret {
     position: absolute;
@@ -305,11 +315,11 @@ body {
 }
 
 /* * Media Queries for tablettes */
-@media screen and (min-width: 650px) and (max-width: 1080px) and (orientation: portrait) {
+@media(min-width: 650px) and (max-width: 1024px) {
   /* ? NavBar with title  */
 
   #lutin,
-  #Pnoel {
+  #PereNoel {
     width: 48px;
   }
 
@@ -324,6 +334,7 @@ body {
 
   #containerCountdown {
     display: flex;
+
     justify-content: center;
     position: relative;
     top: 75px;
@@ -438,7 +449,7 @@ body {
 
   #Mont2 {
     position: absolute;
-    width: 1515px;
+    width: 100%;
     height: 515px;
     left: -349px;
     bottom: -50px;
@@ -449,7 +460,7 @@ body {
 
   #Mont1 {
     position: absolute;
-    width: 1840px;
+    width: 100%;
     height: 595px;
     left: -706px;
     bottom: -150px;
@@ -575,5 +586,448 @@ body {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* ? NavBar with title  */
+
+  #lutin,
+  #PereNoel {
+    width: 64px;
+  }
+
+  #LutinUsers{
+    width:5%;
+  }
+
+  #PNoel{
+    position: absolute;
+    right: 64px;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 0;
+
+  }
+
+  .titre {
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding-right:10px;
+    padding-left:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  /*------------------------------------------------------------------------*/
+
+  /* ? Countdown */
+
+  #containerCountdown {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    width:100%;
+    z-index:-30;
+  }
+  .countdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 150px;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    font-size: 28px;
+  }
+
+  .countdown h2 {
+    font-size: 28px;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Form for register */
+
+  #form {
+    position: relative;
+    top: 170px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    filter: drop-shadow(10px 10px 4px #3a3a3a);
+  }
+
+  #validation {
+    position: relative;
+    left: 130px;
+    width: 75%;
+  }
+
+  #inForm {
+    font-size: 24px;
+    width: 50%;
+    /* border-radius: 25px;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    padding: 25px; */
+  }
+
+  #Pseudo {
+    height: 32px;
+    font-size: 20px;
+  }
+
+  #butok {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    height: 32px;
+    width: 128px;
+    font-size: 18px;
+    z-index: 5;
+  }
+
+  #accept {
+    width: 24px;
+    height: 24px;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+
+  #accept:active,
+  #accept:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  #accept:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7;
+  }
+
+  #accept:checked:after {
+    content: "✓";
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    color: #424242;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Background */
+
+  #Mont2 {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    z-index: -8;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/SecondPlan.svg");
+  }
+
+  #Mont1 {
+    position: absolute;
+    width: 100%; 
+    bottom: 0px;
+    z-index: -6;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/premierPlan.svg");
+  }
+
+  #foret {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 100%;
+    z-index: -12;
+    overflow: hidden;
+  }
+
+  .moon {
+    content: url("../img/650-1080px/Moon.svg");
+    position: absolute;
+    width: 206px;
+    height: 206px;
+    right: 100px;
+    top: 102px;
+    overflow: hidden;
+  }
+  #stars {
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -50;
+  }
+
+  .stars {
+    position: absolute;
+    background-image: url("../img/Stars.svg");
+    overflow: hidden;
+    width: 100%;
+    height: 667px;
+    z-index: -20;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? switch button */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 14px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: #ffffff url("https://i.ibb.co/FxzBYR9/night.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  input:checked + .slider {
+    background-color: #ffffff;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #ffffff;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+    background: rgb(255, 255, 255) url("https://i.ibb.co/7JfqXxB/sunny.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #Sw {
+    position: absolute;
+    top: 90px;
+    right: 82px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+@media screen and (max-width:1024px) and (orientation: landscape)  {
+
+  body,html{
+    overflow:none;
+  }
+  /* ? NavBar with title  */
+
+  #lutin,
+  #PereNoel {
+    width: 48px;  
+  }
+
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Countdown */
+
+  #containerCountdown {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 25px;
+    width:100%;
+    z-index:0;
+    margin-left:15px;
+  }
+
+  .countdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 100px;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    font-size: 28px;
+  }
+
+  .countdown h2 {
+    font-size: 28px;
+  }
+
+
+  .moon, #Sapin1, #Sapin2, #Sapin3{
+    visibility: hidden;
+  }
+
+  #Mont3{
+    visibility: hidden;
+  }
+  
+  #Mont2 {
+    position: fixed;
+    bottom: 0;
+    z-index: -8;
+    left: 0;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/SecondPlan.svg");
+  }
+
+  #Mont1 {
+    position: fixed;
+    bottom: -80px;
+    left:0;
+    z-index: -6;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/premierPlan.svg");
+  }
+
+  #foret {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 100%;
+    z-index: -12;
+    overflow: hidden;
+  }
+
+
+
+/*------------------------------------------------------------------------*/
+
+  /* ? Form for register */
+
+  #form {
+    position: relative;
+    top: -20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    /* filter: drop-shadow(10px 10px 4px #3a3a3a); */
+  }
+
+  #validation {
+    position: relative;
+    left: 130px;
+    width: 75%;
+  }
+
+  #inForm {
+    font-size: 24px;
+    width: 50%;
+    border-radius: 25px;
+    background: rgba(10, 23, 83, 0.7);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(25px);
+    padding: 10px;
+  }
+
+  #Pseudo {
+    height: 32px;
+    font-size: 20px;
+  }
+
+  #butok {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    height: 32px;
+    width: 128px;
+    font-size: 18px;
+    z-index: 5;
+  }
+
+  #accept {
+    width: 24px;
+    height: 24px;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+
+  #accept:active,
+  #accept:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  #accept:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7;
+  }
+
+  #accept:checked:after {
+    content: "✓";
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    color: #424242;
   }
 }
