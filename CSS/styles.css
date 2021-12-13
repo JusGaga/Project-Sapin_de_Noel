@@ -20,6 +20,16 @@ body {
   background-image: linear-gradient(165deg, #000046 26%, #1cb5e0 100%);
   background-repeat: no-repeat;
 }
+main{
+  position: absolute;
+  top: 50px;
+  left: 38%;
+}
+
+#lienTitre{
+  text-decoration: none;
+  color: #fff;
+}
 
 /* * Media Queries for smartphone */
 @media screen and (min-width: 0px) and (max-width: 650px) {
@@ -228,6 +238,33 @@ body {
     top: -160px;
     z-index: -20;
   }
+
+  #foretTirage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    z-index:-20;
+  }
+
+  #CadeauCentre{
+    position: absolute;
+    bottom: 25px;
+    width: 250px;
+    content:url("../img/0-650px/GroupeCadeauCentre.png")
+  }
+  
+  #mont{
+    position: absolute;
+    bottom: -270px;
+    left: -20px;
+    overflow: hidden;
+    content: url("../img/0-650px/SapinCadeau.png");
+  }
+
 
   /*------------------------------------------------------------------------*/
 
@@ -478,15 +515,7 @@ body {
     overflow: hidden;
   }
 
-  .moon {
-    content: url("../img/650-1080px/Moon.svg");
-    position: absolute;
-    width: 206px;
-    height: 206px;
-    left: 649px;
-    top: 102px;
-    overflow: hidden;
-  }
+
   #stars {
     position: absolute;
     overflow: hidden;
@@ -505,6 +534,33 @@ body {
     left: -184px;
     top: -75px;
     z-index: -20;
+  }
+
+  #foretTirage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    z-index:-20;
+  }
+
+  #CadeauCentre{
+    position: absolute;
+    bottom: 25px;
+    width: 250px;
+    content:url("../img/0-650px/GroupeCadeauCentre.png")
+  }
+  
+  #mont{
+    position: absolute;
+    width: 1100px;
+    bottom: -450px;
+    left: -20px;
+    overflow: hidden;
+    content: url("../img/650-1080px/SapinCadeau2.png");
   }
 
   /*------------------------------------------------------------------------*/
@@ -784,6 +840,41 @@ body {
     z-index: -20;
   }
 
+  #foretTirage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    z-index:-20;
+  }
+
+  #CadeauCentre{
+    position: absolute;
+    bottom: -20px;
+    width: 400px;
+    content:url("../img/0-650px/GroupeCadeauCentre.png");
+    z-index:10;
+  }
+  
+  #mont{
+    position: absolute;
+    bottom: -720px;
+    left: -20px;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/SapinCadeau3.png");
+    z-index:-5;
+  }
+
+  #result{
+    border-radius: 25px;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    padding: 25px;
+  }
   /*------------------------------------------------------------------------*/
 
   /* ? switch button */
