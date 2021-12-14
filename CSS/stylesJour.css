@@ -1,0 +1,1202 @@
+/* * CSS Realisé Par Gaetan
+   ! Simon Absent 13/12/2021
+*/
+
+/* style body and html for all pages */
+
+html,
+body {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  height: 100% !important;
+  max-height: none !important;
+  overflow: auto !important;
+  overflow-x: hidden !important;
+  margin: 0px;
+}
+
+body {
+  background-image: linear-gradient(165deg, #9be2fe 0%,#67d1fb 100%);
+  background-repeat: no-repeat;
+}
+
+table,
+table tr,
+table tr td,
+table tr th {
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin: 30px;
+}
+table button {
+  width: 100%;
+}
+
+#lienTitre {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+#CadeauCentre:hover{
+  animation: myAnim 2.5s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+  0%,30%{
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  5%{
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  10%{
+    transform: translateX(15px) rotate(6deg);
+  }
+  15%{
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  20%{
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  25%{
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+
+  65%{
+    transform: scale3d(1, 1, 1);
+  }
+  70%{ 
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  75%{
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  80%{
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  85%{
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  90%{
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  95%{
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* * Media Queries for smartphone */
+@media screen and (min-width: 0px) and (max-width: 650px) {
+  /* ? NavBar with title  */
+
+  #lutin,
+  #PereNoel {
+    width: 48px;
+    z-index: 20;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Countdown */
+
+  #containerCountdown {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    z-index: -10;
+  }
+  .countdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    width: 70%;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    font-size: 18px;
+  }
+
+  .countdown h2 {
+    font-size: 18px;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Form for register */
+
+  #form {
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #divListe {
+    position: relative;
+    left: 110px;
+  }
+
+  #divListe li {
+    font-size: 12px;
+  }
+
+  #validation {
+    position: relative;
+    left: 130px;
+    width: 75%;
+  }
+
+  #inForm {
+    font-size: 24px;
+    border-radius: 25px;
+    background: rgba(33, 34, 37, 0.3);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    padding: 7px;
+  }
+
+  #Pseudo {
+    height: 32px;
+    font-size: 16px;
+  }
+
+  #butok {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    height: 32px;
+    width: 128px;
+    font-size: 18px;
+    z-index: 5;
+  }
+
+  #accept {
+    width: 32px;
+    height: 32px;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+
+  #accept:active,
+  #accept:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  #accept:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7;
+  }
+
+  #accept:checked:after {
+    content: "✓";
+    font-size: 24px;
+    position: absolute;
+    top: 0px;
+    left: 8px;
+    color: #424242;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Background */
+
+  #Sapin1 {
+    position: absolute;
+    left: 45%;
+    bottom: 20px;
+    width: 50%;
+    /* overflow: hidden; */
+    z-index: -5;
+    content: url("../img/0-650px/Sapin1.png");
+  }
+  #Sapin2 {
+    position: absolute;
+    bottom: 50px;
+    width: 50%;
+    /* overflow: hidden; */
+    z-index: -7;
+    content: url("../img/0-650px/Sapin2.png");
+  }
+  #Sapin3 {
+    position: absolute;
+    /* bottom:0px; */
+    bottom: 123px;
+    left: 62%;
+    width: 25%;
+    /* overflow: hidden; */
+    z-index: -9;
+    content: url("../img/0-650px/Sapin3.png");
+  }
+
+  #Mont3 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    overflow: hidden;
+    z-index: -10;
+    content: url("../img/0-650px/Mont3.png");
+  }
+
+  #Mont2 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    overflow: hidden;
+    z-index: -8;
+    content: url("../img/0-650px/Mont2.png");
+  }
+
+  #Mont1 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    overflow: hidden;
+    z-index: -6;
+    content: url("../img/0-650px/Mont1.png");
+  }
+  #foret {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    /* overflow: hidden;  */
+  }
+
+  #stars {
+    visibility: hidden;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  .stars {
+    position: absolute;
+    background-image: url("../img/Stars.svg");
+    overflow: hidden;
+    visibility: hidden;
+    width: 1749px;
+    height: 667px;
+    left: -184px;
+    top: -160px;
+    z-index: -20;
+  }
+
+  #foretTirage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    z-index: -20;
+  }
+
+  #CadeauCentre {
+    position: absolute;
+    bottom: 40px;
+    width: 250px;
+    content: url("../img/0-650px/GroupeCadeauCentre.png");
+    
+  }
+
+
+  #mont {
+    position: absolute;
+    bottom: -270px;
+    left: -20px;
+    overflow: hidden;
+    content: url("../img/0-650px/SapinCadeau.png");
+  }
+
+  #result {
+    border-radius: 25px;
+    background: rgba(10, 23, 83, 0.8);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 25px;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? switch button */
+
+  .switch {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 14px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    /* change the url for change the img of the btn */
+    background: #ffffff url("https://i.ibb.co/FxzBYR9/night.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  input:checked + .slider {
+    background-color: #ffffff;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #ffffff;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+    /* change the url for change the img of the btn */
+    background: rgb(255, 255, 255) url("https://i.ibb.co/7JfqXxB/sunny.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #Sw {
+    position: relative;
+    top: -80px;
+    right: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* * Media Queries for tablettes */
+@media (min-width: 650px) and (max-width: 1024px) {
+  /* ? NavBar with title  */
+
+  #lutin,
+  #PereNoel {
+    width: 48px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Countdown */
+
+  #containerCountdown {
+    display: flex;
+
+    justify-content: center;
+    position: relative;
+    top: 75px;
+    z-index: -10;
+  }
+  .countdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    height: 150px;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    font-size: 28px;
+  }
+
+  .countdown h2 {
+    font-size: 28px;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Form for register */
+
+  #form {
+    position: relative;
+    top: 120px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+  }
+
+  #validation {
+    position: relative;
+    left: 130px;
+    width: 75%;
+  }
+
+  #inForm {
+    font-size: 24px;
+    width: 50%;
+    border-radius: 25px;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(25px);
+    padding: 25px;
+  }
+
+  #Pseudo {
+    height: 32px;
+    font-size: 20px;
+  }
+
+  #butok {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    height: 32px;
+    width: 128px;
+    font-size: 18px;
+    z-index: 5;
+  }
+
+  #accept {
+    width: 24px;
+    height: 24px;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+
+  #accept:active,
+  #accept:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  #accept:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7;
+  }
+
+  #accept:checked:after {
+    content: "✓";
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    color: #424242;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Background */
+
+  #Mont3 {
+    position: absolute;
+    width: 1835px;
+    height: 725px;
+    left: -258px;
+    bottom: -50px;
+    z-index: -10;
+    overflow: hidden;
+    content: url("../img/650-1080px/Mont3.svg");
+  }
+
+  #Mont2 {
+    position: absolute;
+    width: 1300px;
+    height: 515px;
+    left: -149px;
+    bottom: -50px;
+    z-index: -8;
+    overflow: hidden;
+    content: url("../img/650-1080px/Mont2.svg");
+  }
+
+  #Mont1 {
+    position: absolute;
+    width: 100%;
+    height: 595px;
+    /* left: -706px; */
+    bottom: -150px;
+    z-index: -6;
+    overflow: hidden;
+    content: url("../img/650-1080px/Mont1.svg");
+  }
+
+  #foret {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 100%;
+    z-index: -12;
+    overflow: hidden;
+  }
+
+  #stars {
+    position: absolute;
+    visibility: hidden;
+    overflow: hidden;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -50;
+  }
+
+  .stars {
+    position: absolute;
+    visibility: hidden;
+    background-image: url("../img/Stars.svg");
+    overflow: hidden;
+    width: 1749px;
+    height: 667px;
+    left: -184px;
+    top: -75px;
+    z-index: -20;
+  }
+
+  #foretTirage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    z-index: -20;
+  }
+
+  #CadeauCentre {
+    position: absolute;
+    bottom:40px;
+    width: 250px;
+    content: url("../img/0-650px/GroupeCadeauCentre.png");
+  }
+
+  #mont {
+    position: absolute;
+    width: 1100px;
+    bottom: -450px;
+    left: -20px;
+    overflow: hidden;
+    content: url("../img/650-1080px/SapinCadeau2.png");
+  }
+
+  #result {
+    border-radius: 25px;
+    background: rgba(10, 23, 83, 0.8);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 25px;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? switch button */
+  .switch {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 14px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: #ffffff url("https://i.ibb.co/FxzBYR9/night.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  input:checked + .slider {
+    background-color: #ffffff;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #ffffff;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+    background: rgb(255, 255, 255) url("https://i.ibb.co/7JfqXxB/sunny.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #Sw {
+    position: relative;
+    top: -80px;
+    right: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* ? NavBar with title  */
+
+  #lutin,
+  #PereNoel {
+    width: 64px;
+  }
+
+  #LutinUsers {
+    width: 5%;
+  }
+
+  #PNoel {
+    position: relative;
+    right: 64px;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+
+  .titre {
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  /*------------------------------------------------------------------------*/
+
+  /* ? Countdown */
+
+  #containerCountdown {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: -10;
+  }
+  .countdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 150px;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    font-size: 28px;
+  }
+
+  .countdown h2 {
+    font-size: 28px;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Form for register */
+
+  #form {
+    position: relative;
+    top: 150px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    filter: drop-shadow(10px 10px 4px #3a3a3a);
+  }
+
+  #validation {
+    position: relative;
+    left: 130px;
+    width: 75%;
+  }
+
+  #inForm {
+    font-size: 24px;
+    width: 50%;
+    /* border-radius: 25px;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    padding: 25px; */
+  }
+
+  #Pseudo {
+    height: 32px;
+    font-size: 20px;
+  }
+
+  #butok {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    height: 32px;
+    width: 128px;
+    font-size: 18px;
+    z-index: 5;
+  }
+
+  #accept {
+    width: 24px;
+    height: 24px;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+
+  #accept:active,
+  #accept:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  #accept:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7;
+  }
+
+  #accept:checked:after {
+    content: "✓";
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    color: #424242;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Background */
+
+  #Mont2 {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    z-index: -8;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/SecondPlan.svg");
+  }
+
+  #Mont1 {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    z-index: -6;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/premierPlan.svg");
+  }
+
+  #foret {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 100%;
+    z-index: -12;
+    overflow: hidden;
+  }
+
+  .moon {
+    content: url("../img/650-1080px/Moon.svg");
+    visibility:hidden;
+    position: absolute;
+    width: 206px;
+    height: 206px;
+    right: 100px;
+    top: 102px;
+    overflow: hidden;
+  }
+  #stars {
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -50;
+  }
+
+  .stars {
+    position: absolute;
+    visibility: hidden;
+    background-image: url("../img/Stars.svg");
+    overflow: hidden;
+    width: 100%;
+    height: 667px;
+    z-index: -20;
+  }
+
+  #foretTirage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    z-index: -20;
+  }
+
+  #CadeauCentre {
+    position: absolute;
+    bottom: 10px;
+    width: 400px;
+    content: url("../img/0-650px/GroupeCadeauCentre.png");
+    z-index: 10;
+  }
+
+  #mont {
+    position: absolute;
+    bottom: -720px;
+    left: -20px;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/SapinCadeau3.png");
+    z-index: -5;
+  }
+
+  #result {
+    border-radius: 25px;
+    background: rgba(10, 23, 83, 0.8);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 25px;
+  }
+  /*------------------------------------------------------------------------*/
+
+  /* ? switch button */
+  .switch {
+    position: absolute;
+    display: inline-block;
+    width: 36px;
+    height: 14px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: #ffffff url("https://i.ibb.co/FxzBYR9/night.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  input:checked + .slider {
+    background-color: #ffffff;
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #ffffff;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+    background: rgb(255, 255, 255) url("https://i.ibb.co/7JfqXxB/sunny.png");
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #Sw {
+    position: relative;
+    top: -100px;
+    right: 95px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  body,
+  html {
+    overflow: none;
+  }
+  /* ? NavBar with title  */
+
+  #lutin,
+  #PereNoel {
+    width: 48px;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Countdown */
+
+  #containerCountdown {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    z-index: -10;
+    margin-left: 15px;
+  }
+
+  .countdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 100px;
+    background: rgba(10, 23, 83, 0.5);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 25px;
+    font-size: 28px;
+  }
+
+  .countdown h2 {
+    font-size: 28px;
+  }
+
+  .moon,
+  #Sapin1,
+  #Sapin2,
+  #Sapin3 {
+    visibility: hidden;
+  }
+
+  #Mont3 {
+    visibility: hidden;
+  }
+
+  #Mont2 {
+    position: fixed;
+    bottom: 0;
+    z-index: -8;
+    left: 0;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/SecondPlan.svg");
+  }
+
+  #Mont1 {
+    position: fixed;
+    bottom: -80px;
+    left: 0;
+    z-index: -6;
+    overflow: hidden;
+    content: url("../img/1080px-Ininity/premierPlan.svg");
+  }
+
+  #foret {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 100%;
+    z-index: -12;
+    overflow: hidden;
+  }
+
+  /*------------------------------------------------------------------------*/
+
+  /* ? Form for register */
+
+  #form {
+    position: relative;
+    top: -20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    /* filter: drop-shadow(10px 10px 4px #3a3a3a); */
+  }
+
+  #validation {
+    position: relative;
+    left: 130px;
+    width: 75%;
+  }
+
+  #inForm {
+    font-size: 24px;
+    width: 50%;
+    border-radius: 25px;
+    background: rgba(10, 23, 83, 0.7);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(25px);
+    padding: 10px;
+  }
+
+  #Pseudo {
+    height: 32px;
+    font-size: 20px;
+  }
+
+  #butok {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    height: 32px;
+    width: 128px;
+    font-size: 18px;
+    z-index: 5;
+  }
+
+  #accept {
+    width: 24px;
+    height: 24px;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+  }
+
+  #accept:active,
+  #accept:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  #accept:checked {
+    background-color: #e9ecee;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7;
+  }
+
+  #accept:checked:after {
+    content: "✓";
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    color: #424242;
+  }
+}

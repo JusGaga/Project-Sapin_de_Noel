@@ -11,7 +11,7 @@ body {
   max-width: none !important;
   height: 100% !important;
   max-height: none !important;
-  overflow: hidden !important;
+  overflow: auto !important;
   overflow-x: hidden !important;
   margin: 0px;
 }
@@ -20,15 +20,71 @@ body {
   background-image: linear-gradient(165deg, #000046 26%, #1cb5e0 100%);
   background-repeat: no-repeat;
 }
-main{
-  position: absolute;
-  top: 50px;
-  left: 38%;
+
+table,
+table tr,
+table tr td,
+table tr th {
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  margin: 30px;
+}
+table button {
+  width: 100%;
 }
 
-#lienTitre{
+#lienTitre {
   text-decoration: none;
   color: #fff;
+}
+
+
+#CadeauCentre:hover{
+  animation: myAnim 2.5s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+  0%,30%{
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  5%{
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  10%{
+    transform: translateX(15px) rotate(6deg);
+  }
+  15%{
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+  20%{
+    transform: translateX(9px) rotate(2.4deg);
+  }
+  25%{
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+
+  65%{
+    transform: scale3d(1, 1, 1);
+  }
+  70%{ 
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  75%{
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  80%{
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  85%{
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  90%{
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  95%{
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 /* * Media Queries for smartphone */
@@ -37,9 +93,9 @@ main{
 
   #lutin,
   #PereNoel {
-    width: 48px;  
+    width: 48px;
+    z-index: 20;
   }
-
 
   .title {
     font-size: 18px;
@@ -55,6 +111,7 @@ main{
     justify-content: center;
     position: relative;
     top: 50px;
+    z-index: -30;
   }
   .countdown {
     position: relative;
@@ -85,13 +142,13 @@ main{
     justify-content: center;
   }
 
-  #divListe{
-    position:relative;
-    left:110px;
+  #divListe {
+    position: relative;
+    left: 110px;
   }
 
-  #divListe li{
-    font-size:12px;
+  #divListe li {
+    font-size: 12px;
   }
 
   #validation {
@@ -239,25 +296,27 @@ main{
     z-index: -20;
   }
 
-  #foretTirage{
+  #foretTirage {
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     justify-content: center;
     bottom: 0;
-    z-index:-20;
+    z-index: -20;
   }
 
-  #CadeauCentre{
+  #CadeauCentre {
     position: absolute;
-    bottom: 25px;
+    bottom: 40px;
     width: 250px;
-    content:url("../img/0-650px/GroupeCadeauCentre.png")
+    content: url("../img/0-650px/GroupeCadeauCentre.png");
+    
   }
-  
-  #mont{
+
+
+  #mont {
     position: absolute;
     bottom: -270px;
     left: -20px;
@@ -265,13 +324,20 @@ main{
     content: url("../img/0-650px/SapinCadeau.png");
   }
 
+  #result {
+    border-radius: 25px;
+    background: rgba(10, 23, 83, 0.8);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 25px;
+  }
 
   /*------------------------------------------------------------------------*/
 
   /* ? switch button */
 
   .switch {
-    position: relative;
+    position: absolute;
     display: inline-block;
     width: 30px;
     height: 14px;
@@ -342,8 +408,8 @@ main{
   }
 
   #Sw {
-    position: absolute;
-    top: 75px;
+    position: relative;
+    top: -80px;
     right: 25px;
     width: 100%;
     display: flex;
@@ -352,7 +418,7 @@ main{
 }
 
 /* * Media Queries for tablettes */
-@media(min-width: 650px) and (max-width: 1024px) {
+@media (min-width: 650px) and (max-width: 1024px) {
   /* ? NavBar with title  */
 
   #lutin,
@@ -375,6 +441,7 @@ main{
     justify-content: center;
     position: relative;
     top: 75px;
+    z-index: -30;
   }
   .countdown {
     position: relative;
@@ -486,9 +553,9 @@ main{
 
   #Mont2 {
     position: absolute;
-    width: 100%;
+    width: 1300px;
     height: 515px;
-    left: -349px;
+    left: -179px;
     bottom: -50px;
     z-index: -8;
     overflow: hidden;
@@ -499,7 +566,7 @@ main{
     position: absolute;
     width: 100%;
     height: 595px;
-    left: -706px;
+    /* left: -706px; */
     bottom: -150px;
     z-index: -6;
     overflow: hidden;
@@ -514,7 +581,6 @@ main{
     z-index: -12;
     overflow: hidden;
   }
-
 
   #stars {
     position: absolute;
@@ -536,25 +602,25 @@ main{
     z-index: -20;
   }
 
-  #foretTirage{
+  #foretTirage {
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     justify-content: center;
     bottom: 0;
-    z-index:-20;
+    z-index: -20;
   }
 
-  #CadeauCentre{
+  #CadeauCentre {
     position: absolute;
-    bottom: 25px;
+    bottom:40px;
     width: 250px;
-    content:url("../img/0-650px/GroupeCadeauCentre.png")
+    content: url("../img/0-650px/GroupeCadeauCentre.png");
   }
-  
-  #mont{
+
+  #mont {
     position: absolute;
     width: 1100px;
     bottom: -450px;
@@ -563,11 +629,19 @@ main{
     content: url("../img/650-1080px/SapinCadeau2.png");
   }
 
+  #result {
+    border-radius: 25px;
+    background: rgba(10, 23, 83, 0.8);
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 25px;
+  }
+
   /*------------------------------------------------------------------------*/
 
   /* ? switch button */
   .switch {
-    position: relative;
+    position: absolute;
     display: inline-block;
     width: 30px;
     height: 14px;
@@ -636,8 +710,8 @@ main{
   }
 
   #Sw {
-    position: absolute;
-    top: 75px;
+    position: relative;
+    top: -80px;
     right: 25px;
     width: 100%;
     display: flex;
@@ -653,26 +727,25 @@ main{
     width: 64px;
   }
 
-  #LutinUsers{
-    width:5%;
+  #LutinUsers {
+    width: 5%;
   }
 
-  #PNoel{
-    position: absolute;
+  #PNoel {
+    position: relative;
     right: 64px;
   }
 
   .title {
     font-size: 22px;
     margin-bottom: 0;
-
   }
 
   .titre {
     border: 1px solid #fff;
     border-radius: 25px;
-    padding-right:10px;
-    padding-left:10px;
+    padding-right: 10px;
+    padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
   }
@@ -685,8 +758,8 @@ main{
     justify-content: center;
     position: absolute;
     top: 50px;
-    width:100%;
-    z-index:-30;
+    width: 100%;
+    z-index: -30;
   }
   .countdown {
     position: relative;
@@ -714,7 +787,7 @@ main{
 
   #form {
     position: relative;
-    top: 170px;
+    top: 150px;
     display: flex;
     justify-content: center;
     border-radius: 25px;
@@ -797,7 +870,7 @@ main{
 
   #Mont1 {
     position: absolute;
-    width: 100%; 
+    width: 100%;
     bottom: 0px;
     z-index: -6;
     overflow: hidden;
@@ -840,46 +913,46 @@ main{
     z-index: -20;
   }
 
-  #foretTirage{
+  #foretTirage {
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     justify-content: center;
     bottom: 0;
-    z-index:-20;
+    z-index: -20;
   }
 
-  #CadeauCentre{
+  #CadeauCentre {
     position: absolute;
-    bottom: -20px;
+    bottom: 10px;
     width: 400px;
-    content:url("../img/0-650px/GroupeCadeauCentre.png");
-    z-index:10;
+    content: url("../img/0-650px/GroupeCadeauCentre.png");
+    z-index: 10;
   }
-  
-  #mont{
+
+  #mont {
     position: absolute;
     bottom: -720px;
     left: -20px;
     overflow: hidden;
     content: url("../img/1080px-Ininity/SapinCadeau3.png");
-    z-index:-5;
+    z-index: -5;
   }
 
-  #result{
+  #result {
     border-radius: 25px;
-    background: rgba(10, 23, 83, 0.5);
+    background: rgba(10, 23, 83, 0.8);
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.2);
-    backdrop-filter: none;
+    backdrop-filter: blur(5px);
     padding: 25px;
   }
   /*------------------------------------------------------------------------*/
 
   /* ? switch button */
   .switch {
-    position: relative;
+    position: absolute;
     display: inline-block;
     width: 36px;
     height: 14px;
@@ -948,28 +1021,26 @@ main{
   }
 
   #Sw {
-    position: absolute;
-    top: 90px;
-    right: 82px;
+    position: relative;
+    top: -100px;
+    right: 95px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
   }
 }
 
-
-@media screen and (max-width:1024px) and (orientation: landscape)  {
-
-  body,html{
-    overflow:none;
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  body,
+  html {
+    overflow: none;
   }
   /* ? NavBar with title  */
 
   #lutin,
   #PereNoel {
-    width: 48px;  
+    width: 48px;
   }
-
 
   .title {
     font-size: 18px;
@@ -985,9 +1056,9 @@ main{
     justify-content: center;
     position: absolute;
     top: 25px;
-    width:100%;
-    z-index:0;
-    margin-left:15px;
+    width: 100%;
+    z-index: -30;
+    margin-left: 15px;
   }
 
   .countdown {
@@ -1010,15 +1081,17 @@ main{
     font-size: 28px;
   }
 
-
-  .moon, #Sapin1, #Sapin2, #Sapin3{
+  .moon,
+  #Sapin1,
+  #Sapin2,
+  #Sapin3 {
     visibility: hidden;
   }
 
-  #Mont3{
+  #Mont3 {
     visibility: hidden;
   }
-  
+
   #Mont2 {
     position: fixed;
     bottom: 0;
@@ -1031,7 +1104,7 @@ main{
   #Mont1 {
     position: fixed;
     bottom: -80px;
-    left:0;
+    left: 0;
     z-index: -6;
     overflow: hidden;
     content: url("../img/1080px-Ininity/premierPlan.svg");
@@ -1046,9 +1119,7 @@ main{
     overflow: hidden;
   }
 
-
-
-/*------------------------------------------------------------------------*/
+  /*------------------------------------------------------------------------*/
 
   /* ? Form for register */
 
