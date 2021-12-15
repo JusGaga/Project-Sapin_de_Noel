@@ -10,8 +10,14 @@
 </head>
 
 <body onload="init()">
-        <?php session_start(); 
-        $date = $_SESSION['dateDemander'];
+        <?php session_start();
+        if(isset($_SESSION['dateDemander'])){
+            $date = $_SESSION['dateDemander'];
+        }
+        
+        if (!isset($date)){
+            $date = "24 dec 2021";
+        }
         echo $date;
         ?>
     <input value="<?php  echo $date ?>" type="text" hidden="hidden" id="InputDate" />
