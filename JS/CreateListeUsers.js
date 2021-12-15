@@ -13,6 +13,7 @@ form.addEventListener("submit",e => {
         obj.push({id:i, name:a})
         i++;
     }
+    console.log(obj)
     lutin.innerHTML = obj.length
 })
 
