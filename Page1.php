@@ -7,6 +7,7 @@
     <meta name="viewport" content="initial-scale=1" width="device-width" />
     <title>Sapin De Noel</title>
     <link rel="stylesheet" href="./CSS/stylesNuit.css" id="themes" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
@@ -26,7 +27,7 @@
             <div>
                 <div id="soustitle" class="d-flex flex-row m-2 p-2">
                     <div id="LutinUsers">
-                        <img src="./img/lutin.png" id="lutin" alt="Logo Lutin Utilisateurs" />
+                        <img src="./img/lutin.png" id="lutin" alt="ogo LuLtin Utilisateurs" />
                     </div>
                     <div class="d-flex align-items-center">
                         <h1 id="NbUsers" class="title"><span id="nbrUsers">0</span> Lutins</h1>
@@ -75,25 +76,18 @@
                 </div>
 
                 <script>
-                 function addPseudo()
-                 {
-                     let nom = $( "#Pseudo" ).val();
-             
-                     $.post(
-                         "addPseudo.php",
-                         {
-                             titre : pseudo ,
-                         },
-                         function(data, status)
-                         {
-                             
-                         }
-                     );
-                 }
-                
-                
-                
-                 </script>
+                    function addPseudo() {
+                        let nom = $("#Pseudo").val();
+                        console.log(nom)
+                        $.post(
+                            "addPseudo.php", {
+                                titre: nom,
+                            },
+                            function(data, status) {
+                            }
+                        );
+                    }
+                </script>
 
 
                 <div class="input-group d-flex align-items-center">
@@ -105,7 +99,7 @@
                     <label for="Validation" class="d-flex mx-3">Validation</label>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <button type="submit" class="registerbtn btn btn-success d-flex align-items-center rounded-pill" id="butok" disabled="true">
+                    <button type="submit" onclick="addPseudo() " class="registerbtn btn btn-success d-flex align-items-center rounded-pill" id="butok" disabled="true">
                         Envoyer
                     </button>
                 </div>

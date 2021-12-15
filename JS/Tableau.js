@@ -1,28 +1,25 @@
 let tableau = document.querySelector("#tableau");
 let lutin = document.querySelector("#nbrUsers");
-let user = [
-  {id: 1, name: "a"},
-  {id: 2, name: "b"},
-  {id: 3, name: "c"},
-  {id: 4, name: "d"},
-  {id: 5, name: "e"},
-  {id: 6, name: "f"},
-  {id: 7, name: "g"},
-  {id: 8, name: "h"},
-  {id: 9, name: "i"},
-  {id: 10, name: "j"},
-];
-let i = 1;
-function defTr() {
-  user.forEach((v) => {
+
+fetch("./utilisateurs.php").then(res => {
+  if (res.status === 200) {
+    return res.json()
+  }
+}).then(value => {
+  let array = value.list;
+  let i = 1;
+  array.forEach(v => {
     let tr = document.createElement("tr");
     tr.innerHTML = `<td class="col-4">${v.id}</td>
-<td class="col-4">${v.name}<td/>
-<button id="${i}" class="btn" onclick="SuppList(this.id)">❌</button>`;
+    <td class="col-4">${v.pseudo}<td/>
+    <button id="${i}" class="btn" onclick="SuppList(this.id)">❌</button>`;
     i++;
     tableau.appendChild(tr);
-  });
-}
+  })
+}).catch(err => {
+  console.log(err)
+})
+//console.log(user)
 
 function suppChild(parent) {
   while (parent.firstChild) {
@@ -44,4 +41,3 @@ function SuppList(id) {
   defTr();
 }
 lutin.innerHTML = user.length;
-defTr();
